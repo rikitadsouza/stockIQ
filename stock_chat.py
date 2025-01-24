@@ -13,14 +13,14 @@ import matplotlib.dates as mdates
 import pandas as pd
 from textblob import TextBlob
 
-# Load environment variables
+# Loading environment variables
 load_dotenv()
 
 google_api_key = os.getenv("GOOGLE_API_KEY")
 news_api_key = os.getenv("NEWS_API_KEY")
-finnhub_api_key = os.getenv("FINNHUB_API_KEY")
 
-# Configure the Google GenerativeAI
+
+# Configuring the Google GenerativeAI
 genai.configure(api_key=google_api_key)
 model = genai.GenerativeModel('gemini-pro')
 
@@ -130,7 +130,7 @@ def get_enhanced_news_sentiment(symbol):
     """Get news and sentiment analysis from multiple sources"""
     try:
         # Add error handling for API keys
-        if not news_api_key or not finnhub_api_key:
+        if not news_api_key:
             return "API keys not properly configured.", []
 
         news_sources = [
