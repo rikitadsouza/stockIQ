@@ -1,2 +1,8 @@
 streamlit
 google-generativeai
+requests
+python-dotenv
+pandas
+matplotlib
+textblob
+ta
