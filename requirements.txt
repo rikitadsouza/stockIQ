@@ -7,3 +7,5 @@ matplotlib
 textblob
 ta
 yfinance
+NEWS_API_KEY
+GOOGLE_API_KEY
