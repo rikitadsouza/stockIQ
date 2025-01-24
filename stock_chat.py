@@ -16,8 +16,8 @@ from textblob import TextBlob
 # Loading environment variables
 load_dotenv()
 
-google_api_key = st.secrets.get("GOOGLE_API_KEY") or os.getenv('GOOGLE_API_KEY')
-news_api_key = st.secrets.get("NEWS_API_KEY") or os.getenv('NEWS_API_KEY')
+google_api_key =  os.getenv('GOOGLE_API_KEY')
+news_api_key = os.getenv('NEWS_API_KEY')
 
 
 # Configuring the Google GenerativeAI
